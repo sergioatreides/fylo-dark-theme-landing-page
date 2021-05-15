@@ -1,0 +1,46 @@
+:root {
+    /* Primary colors */
+    --dark-blue: hsl(217, 28%, 15%); /* intro and email sign up background */
+    --dark-blue-main: hsl(218, 28%, 13%); /* main background */
+    --dark-blue-footer: hsl(216, 53%, 9%); /* footer background */
+    --dark-blue-testimonials: hsl(219, 30%, 18%); /* testimonials background */
+    /* Accent color */
+    --cyan: hsl(176, 68%, 64%); /* inside call-to-action gradient */
+    --blue: hsl(198, 60%, 50%); /* inside call-to-action gradient */
+    --light-red: hsl(0, 100%, 63%); /* errors */
+    /* Neutral colors */
+    --white: hsl(0, 0%, 100%);
+    /* Fonts */
+    --fuente-cuerpo: 'Open Sans', sans-serif; /* body font */
+    --fuente-titulos: 'Raleway', sans-serif; /* Headings, Call-to-actions, Header Navigation */
+}
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+body {
+    background-image: url("../images/bg-curvy-desktop.svg");
+    background-color: var(--dark-blue);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: bottom;
+}
+
+
+
+
+
+
+
+
+
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
