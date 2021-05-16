@@ -171,13 +171,16 @@ h3 {
     color: var(--white);
 }
 .s-claim__a::after {
-    content: "See how Fylo works";
+    content: "";
     display: block;
     background: url("../images/icon-arrow.svg") no-repeat;
     background-position: right;
     width: 150px;
     height: 20px;
+    overflow: visible;
     float: right;
+    position: relative;
+    left: -46%;
     border-bottom: 1px solid var(--cyan);
 }
 
