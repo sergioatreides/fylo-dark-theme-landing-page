@@ -10,6 +10,7 @@
     --light-red: hsl(0, 100%, 63%); /* errors */
     /* Neutral colors */
     --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
     /* Fonts */
     --fuente-cuerpo: 'Open Sans', sans-serif; /* body font */
     --fuente-titulos: 'Raleway', sans-serif; /* Headings, Call-to-actions, Header Navigation */
@@ -19,8 +20,10 @@
     margin: 0 auto;
 }
 body {
-    background-image: url("../images/bg-curvy-desktop.svg");
-    background-color: var(--dark-blue);
+    background: url("../images/bg-curvy-desktop.svg"), 
+                linear-gradient(to bottom, var(--dark-blue), 
+                                            var(--dark-blue) 50%, 
+                                            var(--dark-blue-main) 50%);
     background-repeat: no-repeat;
     background-size: contain;
     background-position-x: center;
@@ -168,6 +171,7 @@ h3 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     margin-top: 80px;
+    margin-bottom: 80px;
     width: 80%;
     grid-gap: 30px;
     padding: 35px 10px;
@@ -178,21 +182,75 @@ h3 {
 .s-testimonios__item {
     background-color: var(--dark-blue-testimonials);
     padding: 35px 25px;
+    filter: drop-shadow(2px 2px 3px var(--black));
 }
 .s-testimonios_retrato {
     width: 25px;
     height: 25px;
     border-radius: 50%;
+    margin-left: 0;
+    margin-right: 0;
 }
 .s-testimonios__heading {
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.s-testimonios__id {
+    margin-left: 15px;
+}
+.s-testimonios__cargo {
+    font-size: .7em;
+}
+.s-testimonios__nombre {
+    font-size: .8em;
 }
 
-/* ------------     BOTONES   ---------------*/
+/* ---------- SECCIÓN FORMULARIO -----------*/
+.s-formulario {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, var(--dark-blue-main), 
+                                            var(--dark-blue-main) 50%, 
+                                            var(--dark-blue-footer) 50%);
+}
+.s-formulario__form {
+    width: 60%;
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px;
+    filter: drop-shadow(2px 2px 5px var(--black));
+}
+.s-formulario__form__texto {
+    width: 65%;
+    text-align: center;
+}
+.s-formulario__form__subs {
+    width: 85%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
+}
+/* -------------   MENU PIE  -------------*/
+.menu-pie {
+    background-color: var(--dark-blue-footer);
+}
+
+/* ----------  BOTONES & INPUT  -----------*/
+.i-email {
+    padding: 15px 35px;
+    margin-right: 20px;
+    border-radius: 50px;
+    border: 0;
+}
 .boton {
-    padding: 15px 60px;
     border-radius: 50px;
     border: 0;
     font-weight: bold;
@@ -206,7 +264,11 @@ h3 {
 .boton:hover {
     cursor: pointer;
 }
+.b-form {
+    padding: 15px 30px;
+}
 .b-getstarted {
+    padding: 15px 60px;
     margin-top: 30px;
     margin-bottom: 30px;
 }
