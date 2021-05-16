@@ -72,8 +72,6 @@ h3 {
     margin-right: 50px;
 }
 .menu-superior ul li {
-/*     padding-right: 20px;
-    padding-left: 25px; */
     width: 8em;
 }
 .logo {
@@ -138,8 +136,14 @@ h3 {
     width: 80%;
     margin-top: 50px;
 }
-.s-claim__img {
-    height: 90%;
+.s-claim__imagen {
+    width: 90%;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+.s-claim__imagen-img {
+    width: 100%;
 }
 .s-claim__texto {
     display: flex;
@@ -373,4 +377,149 @@ footer {
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+/* -----------------     MEDIA QUERIES    --------------------*/
+
+@media screen and (max-width: 900px) {
+
+    body {
+        background: url("../images/bg-curvy-mobile.svg"), 
+                    linear-gradient(to bottom, var(--dark-blue), 
+                                                var(--dark-blue) 9%, 
+                                                var(--dark-blue-main) 9%);
+        background-repeat: no-repeat;
+        background-size:auto;
+        background-position-x: center;
+        background-position-y: 7%;
+    }
+    .contenedor {
+        padding-top: 3em; 
+    }
+    
+    /* -----------    MENU SUPERIOR    ------------*/
+
+    .menu-superior {
+        padding-top: 1.5em;
+        padding-bottom: 1em;
+        position:unset;
+    }
+    .menu-superior ul {
+        margin-right: 0;
+    }
+    .menu-superior ul li {
+        padding-right: 25px;
+        width: auto; 
+    }
+    .logo {
+        height: 1.5em;
+        margin-left: 1.5em;
+    }
+
+    /* -----------    SECCIÓN HERO    ------------*/
+
+    .s-hero {
+        width: 100%;
+    }
+
+    /* ------------ SECCIÓN FEATURES ------------*/
+
+    .s-features {
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 50px;
+    }
+
+    /* ---------- SECCIÓN CLAIM -------------*/
+
+    .s-claim {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .s-claim__h2 {
+        width: 100%;
+        font-size: 1.2em;
+    }
+    .s-claim__imagen {
+        margin-bottom: 40px;
+    }
+    .s-claim__texto {
+        width: 100%;
+        padding-right: 20px;
+    }
+
+    /* -------- SECCIÓN TESTIMONIOS ---------*/
+
+    .s-testimonios {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    /* ---------- SECCIÓN FORMULARIO -----------*/
+
+    .s-formulario__form {
+        width: 90%;
+    }
+    .s-formulario__form-h2 {
+        font-size: 1.2em;
+        margin-top: 50px;
+    }
+    .s-formulario__form__texto {
+        width: 85%;
+    }
+    .s-formulario__form__subs {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    /* ----------  BOTONES & INPUT  -----------*/
+
+    .i-email {
+        padding: 15px 35px;
+        margin-right: 0;
+        width: 100%;
+        margin-top: 25px;
+    }
+    .b-form {
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    /* -------------   MENU PIE  -------------*/
+
+    .menu-pie {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-row-gap: 10px;
+        width: 100%;
+        height: auto;
+        padding: 75px 30px 0px 30px; 
+    }
+    .menu-pie .logo {
+        grid-column: span 1;
+        margin-bottom: 30px;
+    }
+    .logo-pie {
+        height: 3.5em;
+    }
+    .menu-pie__contacto {
+        margin-left: 0;
+        grid-row-gap: 15px;
+    }
+    .menu-pie__menu {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .menu-pie__menu__izq,
+    .menu-pie__menu__dch {
+        margin-left: 0;
+    }
 }
