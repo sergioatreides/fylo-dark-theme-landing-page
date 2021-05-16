@@ -22,12 +22,12 @@
 body {
     background: url("../images/bg-curvy-desktop.svg"), 
                 linear-gradient(to bottom, var(--dark-blue), 
-                                            var(--dark-blue) 50%, 
-                                            var(--dark-blue-main) 50%);
+                                            var(--dark-blue) 35%, 
+                                            var(--dark-blue-main) 35%);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size:auto;
     background-position-x: center;
-    background-position-y: center;
+    background-position-y: 25%;
     color: var(--white);
     font-family: var(--fuente-cuerpo);
     font-size: 14px;
@@ -73,8 +73,8 @@ h3 {
     margin-right: 20px;
     margin-left: 25px;
 }
-.menu-superior__logo {
-    height: 2em;
+.logo {
+    height: 2.5em;
     margin-left: 2.5em;
 }
 
@@ -119,6 +119,7 @@ h3 {
 }
 
 /* ---------- SECCIÓN CLAIM -------------*/
+
 .s-claim {
     display: flex;
     flex-direction: row;
@@ -209,6 +210,7 @@ h3 {
 }
 
 /* ---------- SECCIÓN FORMULARIO -----------*/
+
 .s-formulario {
     margin-top: 30px;
     width: 100%;
@@ -233,21 +235,43 @@ h3 {
     text-align: center;
 }
 .s-formulario__form__subs {
+    display: flex;
+    flex-direction: row;
     width: 85%;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
 
-}
 /* -------------   MENU PIE  -------------*/
-.menu-pie {
+
+footer {
     background-color: var(--dark-blue-footer);
+    width: 100%;
 }
+.menu-pie {
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 3fr 2fr 2fr 1fr;
+    grid-row-gap: 40px;
+    grid-column-gap: 20px;
+    width: 85%;
+    padding: 40px;
+    border: 1px solid orange;
+}
+.menu-pie .logo {
+    grid-column: span 5;
+    margin-left: 0;
+}
+
 
 /* ----------  BOTONES & INPUT  -----------*/
+
 .i-email {
     padding: 15px 35px;
     margin-right: 20px;
     border-radius: 50px;
+    width: 65%;
+    flex-shrink: 2;
     border: 0;
 }
 .boton {
@@ -266,6 +290,7 @@ h3 {
 }
 .b-form {
     padding: 15px 30px;
+    flex-shrink: 1;
 }
 .b-getstarted {
     padding: 15px 60px;
@@ -273,13 +298,14 @@ h3 {
     margin-bottom: 30px;
 }
 
-
-
-
+/* ----------  ATRIBUCIÓN  -----------*/
 
 .attribution { 
+    background-color: var(--dark-blue-footer);
     font-size: 11px; 
     text-align: center; 
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 

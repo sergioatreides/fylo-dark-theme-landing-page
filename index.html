@@ -8,12 +8,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
+  <script src="https://kit.fontawesome.com/0c29b597aa.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
   <header>
     <nav class="menu-superior">
-      <img class="menu-superior__logo" src="images/logo.svg" alt="Fylo Logo">
+      <img class="logo" src="images/logo.svg" alt="Fylo Logo">
       <ul>
         <li>Features</li>
         <li>Team</li>
@@ -155,27 +156,53 @@
 
   </main>
 
-  <footer class="menu-pie">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-    dolore magna aliqua
+  <footer> 
+    
+    <div class="menu-pie">
 
-    +1-543-123-4567
-    example@fylo.com
+      <img class="logo" src="images/logo.svg" alt="Fylo Logo">
 
-    About Us
-    Jobs
-    Press
-    Blog
+      <div class="menu-pie__ubicacion">
+        <img src="images/icon-location.svg" alt="Location">
+        <p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+      </div>
+      <div class="menu-pie__contacto">
+        <div class="menu-pie__contacto__phone">
+          <img src="images/icon-phone.svg" alt="Phone">
+          <p class="parrafo">+1-543-123-4567</p>
+        </div>
+        <div class="menu-pie__contacto__email">
+          <img src="images/icon-email.svg" alt="Email">
+          <p class="parrafo">example@fylo.com</p>
+        </div>
+        
+      </div>
+      <div class="menu-pie__menu">
+        <div class="menu-pie__menu__izq">
+          <a href="#">About Us</a>
+          <a href="#">Jobs</a>
+          <a href="#">Press</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="menu-pie__menu__dch">
+          <a href="#">Contact Us</a>
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+        </div>
+      </div>
+      <div class="menu-pie__social">
+        <i class="fab fa-facebook pie__menu__social-ico"></i>
+        <i class="fab fa-twitter pie__menu__social-ico"></i>
+        <i class="fab fa-instagram pie__menu__social-ico"></i>
+      </div>
+    </div>
 
-    Contact Us
-    Terms
-    Privacy
   </footer>
   
   <div>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://github.com/sergioatreides">Sergio Atreides</a>.
     </p>
   </div>
 
